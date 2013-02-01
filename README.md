@@ -6,7 +6,7 @@ Customisable chat bubble entity for ImpactJS. Simply place the .js file to lib/g
 you can disregard the x and y location of the entity as these will be calculated based on the entity chat bubble follows. A simple example:
 
 ```javascript
-var parameters = {font:Arial};
+var parameters = {font:'Arial'};
 ig.spawnEntity(EntityChatbubble,0,0,parameters);
 ```
 
