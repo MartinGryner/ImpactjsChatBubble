@@ -129,8 +129,9 @@ ig.module(
 				 this._context.lineWidth = this.borderWidth;
 		   }
 		   
-		   var x = this.pos.x-ig.game.screen.x-(this._bubbleWidth-follows.size.x)/2;
-			 var y = this.pos.y-ig.game.screen.y-this.margin-this._bubbleHeight;
+		   // x and y values based on system scale, courtesy of mtg101
+		   var x = ig.system.scale * (this.pos.x - ig.game.screen.x - (this._bubbleWidth - follows.size.x) / (2 * ig.system.scale));
+		   var y = ig.system.scale * (this.pos.y - ig.game.screen.y - this.margin - this._bubbleHeight / ig.system.scale);
 		   
 		   if ( this.shape == 'square' ) {
 		   
